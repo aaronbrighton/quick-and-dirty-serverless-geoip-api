@@ -30,7 +30,6 @@ export class QuickAndDirtyServerlessGeoipApiStack extends cdk.Stack {
         }
       }
     });
-    apigatewayv2_integrations
 
     const httpApi = new apigatewayv2.HttpApi(this, 'HttpApi');
 

@@ -26,17 +26,14 @@ During deployment you provide a MaxMind license key which is used to automatical
 git clone https://github.com/aaronbrighton/quick-and-dirty-serverless-geoip-api.git
 cd quick-and-dirty-serverless-geoip-api
 
-# Install Typescript & AWS CDK
-npm -g install typescript aws-cdk
-
 # Install application dependencies
 npm install
 
 # Bootstrap your environment
-cdk bootstrap
+npx cdk bootstrap
 
 # Deploy the app
-cdk deploy --context maxMindLicenseKey=l***********w
+npx cdk deploy --context maxMindLicenseKey=l***********w
 ```
 
 
