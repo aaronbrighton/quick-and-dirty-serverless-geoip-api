@@ -29,6 +29,7 @@
     "typescript": "~3.9.7"
   },
   "dependencies": {
+    "@aws-cdk/pipelines": "^1.133.0",
     "@maxmind/geoip2-node": "^2.3.2"
   }
 }

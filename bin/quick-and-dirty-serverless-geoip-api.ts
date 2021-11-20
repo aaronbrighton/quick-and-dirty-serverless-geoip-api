@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 import * as cdk from '@aws-cdk/core';
-import { QuickAndDirtyServerlessGeoipApiStack } from '../lib/quick-and-dirty-serverless-geoip-api-stack';
+//import { QuickAndDirtyServerlessGeoipApiStack } from '../lib/quick-and-dirty-serverless-geoip-api-stack';
+import { QuickAndDirtyServerlessGeoipApiPipelineStack } from '../lib/pipeline';
 
 import * as os from 'os';
 import * as path from 'path';
@@ -34,7 +35,7 @@ tempCityDatabaseDownloadFile.on('finish', () => {
 
       // Now that we've retrieved, extracted, and placed the MaxMind GeoLite2 City database into our Lambda function directory
       // We can now synth/deploy our apps
-      new QuickAndDirtyServerlessGeoipApiStack(app, 'QuickAndDirtyServerlessGeoipApiStack');
+      new QuickAndDirtyServerlessGeoipApiPipelineStack(app, 'QuickAndDirtyServerlessGeoipApiPipelineStack');
 
   });
 

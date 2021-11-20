@@ -6,7 +6,7 @@ import * as apigatewayv2_integrations from '@aws-cdk/aws-apigatewayv2-integratio
 import * as path from 'path';
 
 export class QuickAndDirtyServerlessGeoipApiStack extends cdk.Stack {
-  constructor(scope: cdk.App, id: string, props?: cdk.StackProps) {
+  constructor(scope: cdk.Construct, id: string, props?: cdk.StackProps) {
     super(scope, id, props);
 
     const geoIPLookupFunction = new lambda_nodejs.NodejsFunction(this, 'geoIPLookup', {
